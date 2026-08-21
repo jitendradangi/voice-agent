@@ -5,8 +5,7 @@ class MockLLMService(BaseLLMService):
 
     async def generate_response(
         self,
-        messages: list[dict[str, str]]
+        messages: list[dict[str, str]],
+        tools=None,
     ) -> str:
-        user_message = messages[-1]["content"]
-
-        return f"Mock response for: {user_message}"
+        return "This is a mock response from the LLM service."
