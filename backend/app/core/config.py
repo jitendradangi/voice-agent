@@ -9,8 +9,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str | None = None
 
     GEMINI_API_KEY: str | None = None
-    STT_API_KEY: str | None = None
-    TTS_API_KEY: str | None = None
+    ELEVENLABS_API_KEY: str | None = None
 
     model_config = SettingsConfigDict(
         env_file=".env",
